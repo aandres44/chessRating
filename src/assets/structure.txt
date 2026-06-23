@@ -1,0 +1,30 @@
+src/
+│
+├── components/ui/
+│   ├── button.tsx
+│   ├── dropdown-menu.tsx
+│   ├── input.tsx
+|   └── table.tsx
+│
+├── features/
+|   ├── players/
+|   └── rankings/
+|       └── pages/
+│           └── Ranking.tsx
+|
+├── pages/
+│
+├── services/
+│   └── players.service.ts
+│
+├── data/
+│   └── dummyPlayers.ts
+│
+├── types/
+│   └── player.ts
+│
+├── router/
+│   └── router.tsx
+│
+├── App.tsx
+└── main.tsx
