@@ -1,6 +1,40 @@
 import type { PlayerDetail } from "../../../types/Player"
 
-export const players: PlayerDetail[] = [
+export const classic: PlayerDetail[] = [
+  {
+    id: 1,
+    name: "Juan Pérez",
+    fed: "MX",
+    club: "Chai",
+    birthday: new Date("08.12.1968").toDateString(),
+    rating: 2010,
+    category: "Absoluto",
+    k: 30,
+    title: "NM",
+  },
+  {
+    id: 2,
+    name: "Ana López",
+    fed: "ECU",
+    club: "Ingenio",
+    birthday: new Date("08.12.1989").toDateString(),
+    rating: 1900,
+    sex: "F",
+    category: "U20",
+    k: 30,
+  },
+  {
+    id: 3,
+    name: "Carlos García",
+    fed: "MX",
+    birthday: new Date("08.12.2012").toDateString(),
+    rating: 1870,
+    category: "U16",
+    k: 40,
+  },
+]
+
+export const rapid: PlayerDetail[] = [
   {
     id: 1,
     name: "Juan Pérez",
@@ -101,6 +135,40 @@ export const players: PlayerDetail[] = [
     fed: "MX",
     birthday: new Date("08.12.2012").toDateString(),
     rating: 1895,
+    category: "U16",
+    k: 40,
+  },
+]
+
+export const blitz: PlayerDetail[] = [
+  {
+    id: 1,
+    name: "Juan Pérez",
+    fed: "MX",
+    club: "Chai",
+    birthday: new Date("08.12.1968").toDateString(),
+    rating: 1720,
+    category: "Absoluto",
+    k: 30,
+    title: "NM",
+  },
+  {
+    id: 2,
+    name: "Ana López",
+    fed: "ECU",
+    club: "Ingenio",
+    birthday: new Date("08.12.1989").toDateString(),
+    rating: 1940,
+    sex: "F",
+    category: "U20",
+    k: 30,
+  },
+  {
+    id: 3,
+    name: "Carlos García",
+    fed: "MX",
+    birthday: new Date("08.12.2012").toDateString(),
+    rating: 1300,
     category: "U16",
     k: 40,
   },
