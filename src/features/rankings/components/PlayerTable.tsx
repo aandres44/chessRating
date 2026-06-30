@@ -31,16 +31,19 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import React from "react"
+import { useNavigate } from "react-router-dom"
+import type { PlayerDetail } from "@/types/Player"
 
-interface DataTableProps<TData, TValue> {
+interface DataTableProps<TData extends PlayerDetail, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
 }
 
-export default function PlayerTable<TData, TValue>({
+export default function PlayerTable<TData extends PlayerDetail, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
+  const navigate = useNavigate()
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
@@ -131,6 +134,8 @@ export default function PlayerTable<TData, TValue>({
                 <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
+                  onClick={() => navigate(`/profile/${row.original.id}`)}
+                  className="cursor-pointer hover:bg-muted/50 transition-colors"
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id} className="text-center">

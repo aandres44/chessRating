@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar"
 import Blitz from "@/features/rankings/pages/Blitz"
 import Rapid from "@/features/rankings/pages/Rapid"
 import Classic from "@/features/rankings/pages/Classic"
+import Profile from "@/features/players/pages/Profile"
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
         path: "/rating/clasico", // Matches exactly at ://domain.com
         element: <Classic />,
       },
+      {
+        path: "/profile/:id",
+        element: <Profile />
+      }
     ]
   },
 ])

@@ -1,7 +1,7 @@
 "use client"
 
 import type { ColumnDef } from "@tanstack/react-table"
-import type { PlayerSummary } from "@/types/Player"
+import type { PlayerDetail } from "@/types/Player"
 import { ArrowUpDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -15,7 +15,7 @@ export type Payment = {
   email: string
 }
 
-export const columns: ColumnDef<PlayerSummary>[] = [
+export const columns: ColumnDef<PlayerDetail>[] = [
   {
     accessorKey: "id",
     header: "id",
